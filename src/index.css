@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  padding: 0;
+  box-sizing: border-box;
+    height: 100vh;
+}
+* > *{
+    font-family: 'Poppins',sans-serif;
+}
+:root{
+  --bg-color: #FFF7FC;
+  --light-blue: #81d9e3;
+  --dark-blue: #5755FE;
+  --pink: #FF71CD;
+    --light-yellow:#fffda8;
+}
+#root{
+    width: 100vw;
+    height: 100vh;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#navbar{
+ width:100%;
+  background-color: var(--light-blue);
+  height:100px;
+  margin:0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#navbar section {
+    box-sizing: border-box;
+    width: 40%;
+    height:100%;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
+.nav-left{
+    justify-content: start;
+}
+.nav-right{
+    justify-content: end;
+}
+.nav-left h1{
+    font-size: 48px;
+}
+.font-1{
+    font-size: 24px;
+    color: whitesmoke;
+    font-weight: bold;
+}
+#username{
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#username form{
+    padding:5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width:600px;
+    height:400px;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    border: solid 1px #adadad;
+}
+#username form h1{
+    font-size: 48px;
+    color:dodgerblue;
+}
+#username .top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height:100px;
+    margin: 5px;
+    border-bottom: 2px solid #adadad;
+}
+#username input{
+    font-size: large;
+    width:450px;
+    height:30px;
+    border:none;
+    outline:none;
+    border-radius: 5px;
+    background-color:  whitesmoke;
+    margin: 0;
+    color: black;
+}
+#username .input-box{
+    border-bottom: 2px solid #adadad;
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+.login-btn{
+    margin-top: 40px;
+    width:200px;
+    height:50px;
+    border-radius: 20px;
+    font-size: 24px;
+    border: 1px solid #adadad;
+    background-color: dodgerblue;;
+    color:#adadad;
+    font-weight: bold;
+}
+#username span{
+    color: dodgerblue;
+}
+.login-btn:hover{
+    cursor: pointer;
+    background-color: indianred;
+}
+#username span:hover{
+    cursor: pointer;
+    color: black;
+}
+.input-error{
+    background-color: indianred;
+}
+#username p{
+    margin-top: 20px;
+}
+#profile{
+    width: 100%;
+    height: 100%;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#profile .tile{
+    width: 50vw;
+    height: 64vh;
+    min-width: 650px;
+    min-height: 480px;
+    background-color: whitesmoke;
+    display: flex;
+    border-radius: 30px;
+}
+#username .register-btn{
+ margin-top: 25px;
+}
+#profile .pfp-section{
+    height:100%;
+    width: 37%;
+    min-width:270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#profile form{
+    height:100%;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+}
+
+#profile img{
+    height:200px;
+    width: 200px;
+    border-radius: 50%;
+    margin-top: 30px;
+    -webkit-box-shadow: 0px 0px 50px -10px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 50px -10px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 50px -10px rgba(66, 68, 90, 1);
+}
+.tile-shadow{
+    -webkit-box-shadow: 8px 8px 24px 0 rgba(66, 68, 90, 1);
+    -moz-box-shadow: 8px 8px 24px 0 rgba(66, 68, 90, 1);
+    box-shadow: 8px 8px 24px 0 rgba(66, 68, 90, 1);
+}
+.pfp-section button{
+    width:100px;
+    height:30px;
+    margin-top: 15px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+#profile input{
+    font-size: large;
+    height:30px;
+    border:none;
+    outline:none;
+    border-radius: 5px;
+    background-color:  whitesmoke;
+    color: black;
+    border-bottom: 2px solid #adadad;
+    margin-top: 30px;
+    margin-bottom: 7px;
+}
+#profile form div{
+    display: flex;
+    justify-content: end;
+}
+
+#profile #pfp{
+    width:115px;
+    border-bottom: none;
+    margin-top: 10px;
+}
