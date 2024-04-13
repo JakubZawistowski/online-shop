@@ -1,9 +1,11 @@
-import {Toaster} from "react-hot-toast";
+import {toast, Toaster} from "react-hot-toast";
 import {useFormik} from "formik";
 import {registerValidate} from "./helper/validate";
+import {useNavigate} from "react-router-dom";
 import {Link} from "react-router-dom";
-
+import {registerUser} from "./helper/helper";
 export default function Register(){
+    const navigate = useNavigate();
     const formik = useFormik({
         initialValues: {
             email: '',
@@ -14,7 +16,13 @@ export default function Register(){
         validateOnBlur: false,
         validateOnChange: false,
         onSubmit : async values => {
-            console.log(values)
+            let registerPromise = registerUser(values);
+            await toast.promise(registerPromise,{
+                loading: 'Creating...',
+                success : <b>Register Successfully</b>,
+                error : <b>Could not Register</b>
+            })
+            registerPromise.then(function(){navigate('/')});
         }
     })
 
@@ -34,7 +42,10 @@ export default function Register(){
                 <div className={'input-box'}>
                     <input {...formik.getFieldProps('password')} type={"text"} placeholder={'Password'} />
                 </div>
-                <button className={'login-btn'} type={'submit'}>Register</button>
+                <div className={"register-section"}>
+                    <p><Link to='/username'>Back to login!</Link></p>
+                    <button className={'login-btn'} type={'submit'}>Register</button>
+                </div>
             </form>
         </main>
     )

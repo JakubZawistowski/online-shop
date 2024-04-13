@@ -17,6 +17,7 @@ body {
 }
 * > *{
     font-family: 'Poppins',sans-serif;
+    color: var(--font-color)
 }
 :root{
   --bg-color: #FFF7FC;
@@ -24,6 +25,8 @@ body {
   --dark-blue: #5755FE;
   --pink: #FF71CD;
     --light-yellow:#fffda8;
+    --light-green:#AAE9AC;
+    --font-color: #2e2e2e;
 }
 #root{
     width: 100vw;
@@ -47,7 +50,6 @@ code {
     box-sizing: border-box;
     width: 40%;
     height:100%;
-    background-color: red;
     display: flex;
     align-items: center;
     padding: 30px;
@@ -57,6 +59,30 @@ code {
 }
 .nav-right{
     justify-content: end;
+}
+#sell-product{
+    margin-right: 20px;
+    width:150px;
+    height:50px;
+    border: none;
+    font-size: large;
+    font-weight: bold;
+    background-color: whitesmoke;
+}
+#sell-product:hover{
+    border: 5px solid whitesmoke;
+    background-color: #81d9e3;
+    color: whitesmoke;
+}
+#account{
+    border: none;
+    font-size: xx-large;
+    font-weight: bold;
+    color: whitesmoke;
+    background-color: #81d9e3;
+}
+#account:hover{
+    color: #CFF3F0;
 }
 .nav-left h1{
     font-size: 48px;
@@ -115,9 +141,12 @@ code {
     color: black;
 }
 #username .input-box{
+    width: 500px;
     border-bottom: 2px solid #adadad;
     margin-top: 25px;
     margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
 }
 .login-btn{
     margin-top: 40px;
@@ -228,4 +257,32 @@ button:hover{
     width:115px;
     border-bottom: none;
     margin-top: 10px;
+}
+
+
+.input-box{
+    box-sizing: border-box;
+}
+.otp{
+    background-color: lightgray;
+    border: none;
+    width: 100px;
+    border-radius: 30px;
+}
+.otp:hover{
+    background-color: deepskyblue;
+}
+
+.register-section{
+    width: 91%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.register-section button{
+    margin: 20px;
+}
+.register-section p{
+    margin: 20px;
 }

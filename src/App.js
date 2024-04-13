@@ -8,6 +8,9 @@ import Recovery from "./components/Recovery";
 import Reset from "./components/Reset";
 import PageNotFound from "./components/PageNotFound";
 import Main from "./components/Main";
+
+import { AuthorizeUser } from './middleware/auth.js';
+
 const router = createBrowserRouter([
     {
         path: '/',
